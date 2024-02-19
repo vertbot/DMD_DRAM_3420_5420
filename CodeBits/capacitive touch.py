@@ -1,7 +1,6 @@
-from adafruit_circuitplayground import cpx
-
-cpx.adjust_touch_threshold(200)
-
+from adafruit_circuitplayground import cp
 while True:
-    if cpx.touch_A1:
-        print('Touched pad A1')
+    if cp.button_a:
+        cp.play_mp3("laugh.mp3")
+    elif cp.button_b:
+        cp.play_mp3("rimshot.mp3")
